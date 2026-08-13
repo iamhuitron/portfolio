@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch.",
+  description:
+    "Contact Miguel Delgado about software engineering internships and focused collaborations.",
 };
 
 export default function ContactLayout({

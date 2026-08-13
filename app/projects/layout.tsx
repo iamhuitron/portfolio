@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Software engineering, data, and mobile projects — algorithms, offline-first apps, and a few things built just to learn something.",
+    "Software engineering, mobile, automation, data, AI, and FinTech projects by Miguel Delgado.",
 };
 
 export default function ProjectsLayout({

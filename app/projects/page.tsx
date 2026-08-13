@@ -22,15 +22,15 @@ export default async function ProjectsPage() {
     <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
       <header className="max-w-2xl">
         <p className="font-mono text-xs uppercase tracking-widest text-muted">
-          {String(PROJECTS.length).padStart(2, "0")} repositories
+          {String(PROJECTS.length).padStart(2, "0")} builds
         </p>
         <h1 className="font-display font-display-lg mt-3 text-[clamp(2.5rem,7vw,4.5rem)] font-medium leading-[0.98] text-paper">
           Projects
         </h1>
         <p className="mt-5 text-lg text-muted">
-          Everything below pulls live from GitHub — stars, language, and last
-          commit update on their own. Swap a project out by editing one file;
-          nothing else moves.
+          A selection of software products, experiments, and systems work. Each
+          one is presented with the problem, product direction, and technical
+          decisions behind it; repository activity is pulled live from GitHub.
         </p>
       </header>
 

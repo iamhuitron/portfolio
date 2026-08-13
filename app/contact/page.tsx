@@ -10,13 +10,16 @@ export default function ContactPage() {
     <div className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
       <p className="font-mono text-xs uppercase tracking-widest text-muted">Contact</p>
       <h1 className="font-display font-display-lg mt-3 text-[clamp(2.5rem,7vw,4.5rem)] font-medium leading-[0.98] text-paper">
-        Let&apos;s talk.
+        Let&apos;s build
+        <br />
+        something useful.
       </h1>
 
       <Reveal>
-        <p className="mt-6 max-w-md text-lg text-muted">
-          Best way to reach me is email — I usually get back within a day or
-          two.
+        <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
+          I am open to software engineering internships and focused
+          collaborations around automation, data, AI, and FinTech. If there is
+          a real problem to solve, I would be glad to hear about it.
         </p>
       </Reveal>
 
@@ -33,8 +36,9 @@ export default function ContactPage() {
             <CopyButton value={SITE.email} />
           </div>
         ) : (
-          <div className="rounded-sm border border-dashed border-line/40 px-5 py-4 font-mono text-xs text-muted">
-            Add your email in <code className="text-paper">data/site.ts</code>
+          <div className="rounded-sm border border-dashed border-line/40 px-5 py-4 font-mono text-xs leading-relaxed text-muted">
+            Direct email is not configured yet. GitHub is currently the best
+            way to reach me.
           </div>
         )}
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "From reconciliation and reporting in municipal accounting to Informatics at UNAM — education, experience, and the skills in between.",
+    "About Miguel Delgado, a UNAM Informatics student and software developer focused on practical, reliable products.",
 };
 
 export default function AboutLayout({

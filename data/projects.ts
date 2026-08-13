@@ -2,7 +2,8 @@
 // (must match the GitHub repo name exactly — everything else, stars,
 // language, last-updated date, is fetched live) and rewrite the copy below
 // it. To add or remove one: add or remove an object from this array. Order
-// here is display order on /projects. `featured` controls the Home page.
+// here is display order on /projects. `featured` is the main Home project;
+// `selected` controls the wider selection shown below it.
 
 export interface Project {
   /** Exact GitHub repo name under github.com/iamhuitron — used for API calls. */
@@ -13,6 +14,7 @@ export interface Project {
   categories: string[];
   techStack: string[];
   featured: boolean;
+  selected: boolean;
   year: string;
   images: {
     /** Paths under /public/projects, tried before anything fetched live. */
@@ -36,6 +38,7 @@ export const PROJECTS: Project[] = [
     categories: ["Software Engineering", "Algorithms", "Productivity"],
     techStack: ["Next.js", "TypeScript", "React", "pdf.js", "Tesseract.js"],
     featured: true,
+    selected: true,
     year: "2025–2026",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/UniSched-Optimizer" },
@@ -48,7 +51,8 @@ export const PROJECTS: Project[] = [
       "A cross-platform productivity app built around daily scheduling, habit tracking with heatmaps, a five-phase career roadmap, and a mood journal. State lives in Zustand backed by MMKV for near-instant reads, and a GitHub Actions pipeline ships signed Android builds automatically.",
     categories: ["Mobile", "Productivity"],
     techStack: ["React Native", "Expo", "Zustand", "MMKV", "NativeWind"],
-    featured: true,
+    featured: false,
+    selected: true,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/Flowday" },
@@ -61,7 +65,8 @@ export const PROJECTS: Project[] = [
       "A financial analytics engine for invoice reconciliation, validation, and tax-audit reporting, built with Python and Streamlit. The kind of manual reconciliation work I used to do by hand in a municipal accounting office — now a repeatable pipeline instead of a spreadsheet.",
     categories: ["FinTech", "Data Analytics"],
     techStack: ["Python", "Streamlit"],
-    featured: true,
+    featured: false,
+    selected: true,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/Statix" },
@@ -75,6 +80,7 @@ export const PROJECTS: Project[] = [
     categories: ["Software Engineering", "Systems & Networking", "Games"],
     techStack: ["Go", "React", "Wails"],
     featured: false,
+    selected: true,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/NetNaval" },
@@ -88,6 +94,7 @@ export const PROJECTS: Project[] = [
     categories: ["Web Development", "Education"],
     techStack: ["JavaScript", "SCSS"],
     featured: false,
+    selected: true,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/ai-insights" },
@@ -101,6 +108,7 @@ export const PROJECTS: Project[] = [
     categories: ["Web Development", "AI/Automation"],
     techStack: ["PHP", "HTML"],
     featured: false,
+    selected: true,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/titulacion-ai" },
@@ -114,6 +122,7 @@ export const PROJECTS: Project[] = [
     categories: ["Software Engineering", "Games"],
     techStack: ["Java"],
     featured: false,
+    selected: false,
     year: "2025",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/java-rpg-game" },
@@ -122,6 +131,10 @@ export const PROJECTS: Project[] = [
 
 export function getFeaturedProjects(): Project[] {
   return PROJECTS.filter((p) => p.featured);
+}
+
+export function getSelectedProjects(): Project[] {
+  return PROJECTS.filter((p) => p.selected);
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {

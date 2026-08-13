@@ -27,19 +27,22 @@ export default function AboutPage() {
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <p className="font-mono text-xs uppercase tracking-widest text-muted">About</p>
       <h1 className="font-display font-display-lg mt-3 text-[clamp(2.5rem,7vw,4.5rem)] font-medium leading-[0.98] text-paper">
-        Ledgers first.
+        Software with
         <br />
-        Then logic.
+        a practical bias.
       </h1>
 
       <Reveal>
         <p className="mt-8 text-lg leading-relaxed text-muted">
-          I started in accounting, not code. Two years of reconciliation and
-          reporting for a municipal government office — closing books,
-          matching invoices, chasing discrepancies to zero — before switching
-          into Informatics at {SITE.university}. That background still shows
-          up in how I build: I default to structure, edge cases, and things
-          that have to be exactly right, not just mostly right.
+          I am a software developer and Informatics student at {SITE.university}.
+          I build web and mobile products, automation workflows, and data tools
+          with a focus on maintainable systems and useful outcomes.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-muted">
+          Before moving into software, I worked in accounting and reporting for
+          a municipal government office. That experience still shapes how I
+          work: I care about structure, edge cases, and software people can
+          trust with important information.
         </p>
       </Reveal>
 
@@ -110,10 +113,15 @@ export default function AboutPage() {
       </Reveal>
 
       <Reveal delay={0.25}>
-        <p className="mt-16 border-t border-line/25 pt-10 text-sm text-muted">
-          Outside of code: weightlifting three times a week, boxing on the
-          side — same discipline, different muscle.
-        </p>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-5 border-t border-line/25 pt-10">
+          <p className="text-sm text-muted">
+            Outside of code: weightlifting three times a week, boxing on the
+            side — same discipline, different muscle.
+          </p>
+          <ButtonLink href="/contact" variant="outline">
+            Start a conversation
+          </ButtonLink>
+        </div>
       </Reveal>
     </div>
   );

@@ -54,7 +54,8 @@ Everything project-related is one array: **`data/projects.ts`**.
   description: "...",
   categories: ["..."],
   techStack: ["..."],
-  featured: true,                // true = also shows on the home page
+  featured: true,                // the main featured project on the home page
+  selected: true,                // appears in the wider home selection
   year: "2025–2026",
   images: { useReadme: true },   // pull the first image out of the README
   links: { github: "https://github.com/iamhuitron/..." },
@@ -63,7 +64,7 @@ Everything project-related is one array: **`data/projects.ts`**.
 
 - **Swap a project**: change `slug` and rewrite the copy around it. Stars, language, and "updated Xd ago" are fetched live — nothing else to touch.
 - **Reorder**: array order = display order on `/projects`.
-- **Add/remove**: add or delete an object. `featured: true` on up to ~3 projects is a good number for the home page.
+- **Add/remove**: add or delete an object. Use one `featured: true` project for the home lead and `selected: true` for the wider home selection.
 
 ### Images
 
