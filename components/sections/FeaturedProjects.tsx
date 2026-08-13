@@ -8,6 +8,8 @@ import {
 import { getRepoData, getRepoReadmeImage } from "@/lib/github";
 import { SITE } from "@/data/site";
 import { Chip } from "@/components/ui/Chip";
+import { ProjectActions } from "@/components/ui/ProjectActions";
+import { ProjectBrief } from "@/components/ui/ProjectBrief";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { ProjectVisual } from "@/components/ui/ProjectVisual";
 import { Reveal } from "@/components/ui/Reveal";
@@ -28,8 +30,11 @@ export async function FeaturedProjects() {
   const selected = getSelectedProjects();
   const enriched = await Promise.all(selected.map(enrichProject));
   const featuredSlug = getFeaturedProjects()[0]?.slug;
-  const featured = enriched.find(({ project }) => project.slug === featuredSlug) ?? enriched[0];
-  const supporting = enriched.filter(({ project }) => project.slug !== featured?.project.slug);
+  const featured =
+    enriched.find(({ project }) => project.slug === featuredSlug) ?? enriched[0];
+  const supporting = enriched.filter(
+    ({ project }) => project.slug !== featured?.project.slug,
+  );
 
   return (
     <section className="mx-auto max-w-6xl px-6 pb-20 pt-8 sm:pb-28">
@@ -59,65 +64,72 @@ export async function FeaturedProjects() {
 
       {featured && (
         <Reveal delay={0.08} className="mt-10">
-          <Link
-            href={featured.project.links.live ?? featured.project.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group grid overflow-hidden rounded-sm border border-line/35 bg-ink-soft/40 transition-colors duration-300 hover:border-accent md:grid-cols-[1.08fr_0.92fr]"
-            aria-label={`${featured.project.links.live ? "View product" : "View repository"}: ${featured.project.title}`}
-          >
-            <ProjectVisual
-              project={featured.project}
-              image={featured.image}
-              featured
-              className="rounded-none border-0 border-r border-line/35 md:rounded-none"
-            />
+          <article className="group grid overflow-hidden rounded-sm border border-line/35 bg-ink-soft/40 transition-colors duration-300 hover:border-accent md:grid-cols-[1.08fr_0.92fr]">
+            <Link
+              href={featured.project.links.live ?? featured.project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block md:h-full"
+              aria-label={`${featured.project.links.live ? "View product" : "View repository"}: ${featured.project.title}`}
+            >
+              <ProjectVisual
+                project={featured.project}
+                image={featured.image}
+                featured
+                className="rounded-none border-0 border-r border-line/35 md:h-full md:aspect-auto md:rounded-none"
+              />
+            </Link>
 
-            <div className="flex flex-col justify-between p-6 sm:p-8">
-              <div>
-                <div className="flex items-center justify-between gap-4">
-                  <p className="font-mono text-[11px] uppercase tracking-widest text-accent">
-                    Featured product · {featured.project.year}
-                  </p>
-                  <ArrowUpRight
-                    size={18}
-                    className="shrink-0 text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
-                    aria-hidden
-                  />
-                </div>
-                <h3 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] font-medium leading-none text-paper">
-                  {featured.project.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-paper/90">
-                  {featured.project.tagline}
+            <div className="flex flex-col p-6 sm:p-8">
+              <div className="flex items-center justify-between gap-4">
+                <p className="font-mono text-[11px] uppercase tracking-widest text-accent">
+                  Featured product · {featured.project.year}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  {featured.project.description}
-                </p>
+                <ArrowUpRight
+                  size={18}
+                  className="shrink-0 text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                  aria-hidden
+                />
               </div>
 
-              <div className="mt-8">
-                <div className="flex flex-wrap gap-1.5">
-                  {featured.project.techStack.map((tech) => (
-                    <Chip key={tech}>{tech}</Chip>
-                  ))}
-                </div>
-                <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-wide text-muted">
-                  {featured.liveData?.language && <span>{featured.liveData.language}</span>}
-                  {featured.liveData?.language && <span aria-hidden>·</span>}
-                  {featured.liveData && (
-                    <span className="flex items-center gap-1">
-                      <Star size={10} aria-hidden />
-                      {featured.liveData.stars} stars
-                    </span>
-                  )}
-                  <span className="text-accent">
-                    {featured.project.links.live ? "Open product" : "Open project repository"}
+              <h3 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] font-medium leading-none text-paper">
+                <Link
+                  href={featured.project.links.live ?? featured.project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-300 hover:text-accent"
+                >
+                  {featured.project.title}
+                </Link>
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-paper/90">
+                {featured.project.tagline}
+              </p>
+
+              <ProjectBrief project={featured.project} />
+
+              <div className="mt-7 flex flex-wrap gap-1.5">
+                {featured.project.techStack.map((tech) => (
+                  <Chip key={tech}>{tech}</Chip>
+                ))}
+              </div>
+
+              <ProjectActions project={featured.project} className="mt-8" />
+
+              <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-wide text-muted">
+                {featured.liveData?.language && (
+                  <span>{featured.liveData.language}</span>
+                )}
+                {featured.liveData?.language && <span aria-hidden>·</span>}
+                {featured.liveData && (
+                  <span className="flex items-center gap-1">
+                    <Star size={10} aria-hidden />
+                    {featured.liveData.stars} stars
                   </span>
-                </div>
+                )}
               </div>
             </div>
-          </Link>
+          </article>
         </Reveal>
       )}
 

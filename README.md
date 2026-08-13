@@ -51,7 +51,9 @@ Everything project-related is one array: **`data/projects.ts`**.
   slug: "UniSched-Optimizer",   // must match the GitHub repo name exactly
   title: "UniSched Optimizer",
   tagline: "...",
-  description: "...",
+  problem: "...",
+  solution: "...",
+  technicalHighlights: ["..."],
   categories: ["..."],
   techStack: ["..."],
   featured: true,                // the main featured project on the home page
@@ -72,7 +74,11 @@ For each project, in priority order:
 
 1. `images.local: ["/projects/my-screenshot.png"]` — drop the file in `public/projects/` and reference it here.
 2. `images.useReadme: true` — the site fetches the repo's README and grabs the first image it finds (Markdown or `<img>`).
-3. Neither — the project row just skips the thumbnail and stays text-only. No broken-image icon, ever.
+3. Neither — the project gets an honest screenshot slot instead of a fabricated preview.
+
+### Project presentation
+
+Every project is written as **Problem → Solution → Technical highlights**. GitHub is always shown as an action. A **Live Demo** action only becomes active when a verified URL is added to `links.live`; otherwise the UI marks it as unavailable rather than inventing a destination.
 
 ## The design system
 
@@ -126,7 +132,7 @@ app/
 components/
   layout/               Navigation, Footer
   sections/             Page-specific composed sections (Hero, FeaturedProjects)
-  ui/                    Reusable primitives (ProjectRow, Chip, ButtonLink, Reveal, CopyButton)
+  ui/                    Reusable primitives (ProjectRow, ProductCard, ProjectBrief, ProjectActions, Chip, ButtonLink, Reveal)
 data/
   site.ts                Identity, nav, contact info
   projects.ts             The modular project registry

@@ -10,7 +10,9 @@ export interface Project {
   slug: string;
   title: string;
   tagline: string;
-  description: string;
+  problem: string;
+  solution: string;
+  technicalHighlights: string[];
   categories: string[];
   techStack: string[];
   featured: boolean;
@@ -33,8 +35,16 @@ export const PROJECTS: Project[] = [
     slug: "UniSched-Optimizer",
     title: "UniSched Optimizer",
     tagline: "Conflict-free class schedules, solved automatically",
-    description:
-      "Upload a course-catalog PDF or photo and a backtracking solver works through every valid combination of sections to find schedules with zero conflicts that fit your constraints — or build one manually with live clash detection as you go. PDF parsing and OCR both run locally in the browser, seeded with a verified course catalog for FES Cuautitlán's Informática program.",
+    problem:
+      "Planning from course-catalog PDFs or photos makes it difficult to compare valid combinations and catch schedule conflicts.",
+    solution:
+      "A browser-based scheduler parses the input, searches valid section combinations with backtracking, and supports manual planning with live clash detection.",
+    technicalHighlights: [
+      "Optimization: backtracking across section combinations",
+      "Data processing: PDF parsing and local OCR",
+      "Validation: live conflict detection and a verified course catalog",
+      "Client-side architecture: parsing and OCR run in the browser",
+    ],
     categories: ["Software Engineering", "Algorithms", "Productivity"],
     techStack: ["Next.js", "TypeScript", "React", "pdf.js", "Tesseract.js"],
     featured: true,
@@ -47,8 +57,16 @@ export const PROJECTS: Project[] = [
     slug: "Flowday",
     title: "Flowday",
     tagline: "Habits, routines, and a five-phase roadmap — offline-first",
-    description:
-      "A cross-platform productivity app built around daily scheduling, habit tracking with heatmaps, a five-phase career roadmap, and a mood journal. State lives in Zustand backed by MMKV for near-instant reads, and a GitHub Actions pipeline ships signed Android builds automatically.",
+    problem:
+      "Daily scheduling, habits, career planning, and mood notes need one mobile workflow that remains useful offline.",
+    solution:
+      "A cross-platform productivity app combines those workflows with locally persisted state for fast, offline-first use.",
+    technicalHighlights: [
+      "Mobile architecture: React Native with Expo",
+      "Offline-first state: Zustand backed by MMKV",
+      "Automation: GitHub Actions ships signed Android builds",
+      "Product surface: scheduling, heatmaps, roadmap, and mood journal",
+    ],
     categories: ["Mobile", "Productivity"],
     techStack: ["React Native", "Expo", "Zustand", "MMKV", "NativeWind"],
     featured: false,
@@ -61,8 +79,16 @@ export const PROJECTS: Project[] = [
     slug: "Statix",
     title: "Statix",
     tagline: "Tax audits, automated — from raw invoices to reconciled reports",
-    description:
-      "A financial analytics engine for invoice reconciliation, validation, and tax-audit reporting, built with Python and Streamlit. The kind of manual reconciliation work I used to do by hand in a municipal accounting office — now a repeatable pipeline instead of a spreadsheet.",
+    problem:
+      "Invoice reconciliation and tax-audit reporting can become repetitive, manual, and difficult to validate consistently.",
+    solution:
+      "A Python and Streamlit analytics engine turns invoice data into a repeatable workflow for validation, reconciliation, and audit reporting.",
+    technicalHighlights: [
+      "Data processing: invoice reconciliation",
+      "Validation: checks before reporting",
+      "Automation: repeatable workflow instead of spreadsheet work",
+      "FinTech context: tax-audit reporting",
+    ],
     categories: ["FinTech", "Data Analytics"],
     techStack: ["Python", "Streamlit"],
     featured: false,
@@ -75,8 +101,16 @@ export const PROJECTS: Project[] = [
     slug: "NetNaval",
     title: "NetNaval",
     tagline: "Battleship meets real-time chat, built for LAN play",
-    description:
-      "A hybrid desktop Battleship game with real-time chat, written in Go with a React front end wired through Wails. Supports LAN multiplayer, peer-to-peer networking, and AI opponents for solo games.",
+    problem:
+      "A LAN game needs gameplay, real-time chat, networking, and solo play to work together in one desktop product.",
+    solution:
+      "A Wails desktop app combines a Go system layer with a React interface for LAN multiplayer, peer-to-peer play, chat, and AI opponents.",
+    technicalHighlights: [
+      "Architecture: Go and React connected through Wails",
+      "Networking: LAN and peer-to-peer multiplayer",
+      "Real-time features: chat alongside game state",
+      "Game systems: AI opponents for solo play",
+    ],
     categories: ["Software Engineering", "Systems & Networking", "Games"],
     techStack: ["Go", "React", "Wails"],
     featured: false,
@@ -89,8 +123,16 @@ export const PROJECTS: Project[] = [
     slug: "ai-insights",
     title: "AI Insights",
     tagline: "AI and machine learning, explained through interaction",
-    description:
-      "An educational site exploring artificial intelligence, machine learning, and emerging tech through a modern, responsive interface — built to teach the concepts visually instead of just writing about them.",
+    problem:
+      "AI and machine-learning concepts are difficult to learn when the material is limited to text and static explanations.",
+    solution:
+      "An interactive, responsive educational site uses visual presentation to explain AI, machine learning, and emerging technology.",
+    technicalHighlights: [
+      "Information architecture: concepts organized as a learning experience",
+      "Front-end delivery: responsive web interface",
+      "Visual communication: interaction supports explanation",
+      "Implementation: JavaScript and SCSS",
+    ],
     categories: ["Web Development", "Education"],
     techStack: ["JavaScript", "SCSS"],
     featured: false,
@@ -103,8 +145,16 @@ export const PROJECTS: Project[] = [
     slug: "titulacion-ai",
     title: "Titulación AI",
     tagline: "Streamlining graduation paperwork with AI-assisted tracking",
-    description:
-      "Built during a hackathon at FES Cuautitlán: a platform for document verification, application tracking, and academic completion workflows, aimed at cutting through the graduation process's usual paperwork bottleneck.",
+    problem:
+      "Graduation paperwork creates bottlenecks across document verification, application tracking, and academic completion.",
+    solution:
+      "A hackathon platform organizes document verification, application tracking, and academic completion workflows in one place.",
+    technicalHighlights: [
+      "Workflow architecture: verification, tracking, and completion",
+      "Automation: AI-assisted tracking for paperwork-heavy processes",
+      "Product scope: academic completion workflow",
+      "Implementation: PHP and HTML",
+    ],
     categories: ["Web Development", "AI/Automation"],
     techStack: ["PHP", "HTML"],
     featured: false,
@@ -117,8 +167,16 @@ export const PROJECTS: Project[] = [
     slug: "java-rpg-game",
     title: "Java RPG",
     tagline: "A turn-based RPG built to put OOP into practice",
-    description:
-      "A Java RPG with custom combat mechanics, character systems, and game-state management — built as a hands-on way to explore object-oriented design beyond classroom exercises.",
+    problem:
+      "Object-oriented design is easier to understand when it has to support a complete, stateful game system.",
+    solution:
+      "A turn-based Java RPG applies OOP through combat mechanics, character systems, and game-state management.",
+    technicalHighlights: [
+      "Architecture: object-oriented game systems",
+      "State management: persistent game state across turns",
+      "Domain logic: combat and character systems",
+      "Implementation: Java",
+    ],
     categories: ["Software Engineering", "Games"],
     techStack: ["Java"],
     featured: false,

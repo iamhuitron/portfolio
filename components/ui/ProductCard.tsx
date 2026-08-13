@@ -4,6 +4,8 @@ import type { Project } from "@/data/projects";
 import type { GithubRepoData } from "@/lib/github";
 import { timeAgo } from "@/lib/utils";
 import { Chip } from "./Chip";
+import { ProjectActions } from "./ProjectActions";
+import { ProjectBrief } from "./ProjectBrief";
 import { ProjectVisual } from "./ProjectVisual";
 
 export function ProductCard({
@@ -21,14 +23,16 @@ export function ProductCard({
   const linkLabel = project.links.live ? "View product" : "View repository";
 
   return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block"
-      aria-label={`${linkLabel}: ${project.title}`}
-    >
-      <ProjectVisual project={project} image={image} />
+    <article className="group">
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+        aria-label={`${linkLabel}: ${project.title}`}
+      >
+        <ProjectVisual project={project} image={image} />
+      </Link>
 
       <div className="mt-5 flex items-start justify-between gap-4">
         <div>
@@ -36,7 +40,14 @@ export function ProductCard({
             {project.categories.slice(0, 2).join(" · ")}
           </p>
           <h3 className="mt-2 font-display text-2xl font-medium text-paper">
-            {project.title}
+            <Link
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-300 hover:text-accent"
+            >
+              {project.title}
+            </Link>
           </h3>
         </div>
         <ArrowUpRight
@@ -47,13 +58,15 @@ export function ProductCard({
       </div>
 
       <p className="mt-2 text-sm leading-relaxed text-muted">{project.tagline}</p>
-      <p className="mt-3 text-sm leading-relaxed text-muted/80">{project.description}</p>
+      <ProjectBrief project={project} compact />
 
-      <div className="mt-4 flex flex-wrap gap-1.5">
+      <div className="mt-5 flex flex-wrap gap-1.5">
         {project.techStack.slice(0, 4).map((tech) => (
           <Chip key={tech}>{tech}</Chip>
         ))}
       </div>
+
+      <ProjectActions project={project} />
 
       <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-wide text-muted">
         {language && <span>{language}</span>}
@@ -70,8 +83,7 @@ export function ProductCard({
             <span>updated {updated}</span>
           </>
         )}
-        <span className="text-accent">{linkLabel}</span>
       </div>
-    </Link>
+    </article>
   );
 }

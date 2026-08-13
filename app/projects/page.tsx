@@ -29,8 +29,8 @@ export default async function ProjectsPage() {
         </h1>
         <p className="mt-5 text-lg text-muted">
           A selection of software products, experiments, and systems work. Each
-          one is presented with the problem, product direction, and technical
-          decisions behind it; repository activity is pulled live from GitHub.
+          one is presented as Problem, Solution, and Technical Highlights, with
+          repository activity pulled live from GitHub.
         </p>
       </header>
 
