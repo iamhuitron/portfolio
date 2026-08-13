@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: `${SITE.name} — Portfolio`,
   description:
     "Portfolio of Miguel Delgado, a software developer and UNAM Informatics student building web, mobile, automation, data, and FinTech products.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+    title: `${SITE.name} — Portfolio`,
+    description:
+      "Software developer and UNAM Informatics student building practical web, mobile, automation, data, and FinTech products.",
+  },
 };
 
 export default function HomePage() {

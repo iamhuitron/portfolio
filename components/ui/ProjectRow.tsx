@@ -30,7 +30,7 @@ export function ProjectRow({ project, liveData, image }: ProjectRowProps) {
           <span className="font-mono text-xs text-muted">{project.year}</span>
         </div>
 
-        <h3 className="mt-3 font-display text-2xl font-medium text-paper sm:text-3xl">
+        <h2 className="mt-3 font-display text-2xl font-medium text-paper sm:text-3xl">
           <Link
             href={href}
             target="_blank"
@@ -39,7 +39,7 @@ export function ProjectRow({ project, liveData, image }: ProjectRowProps) {
           >
             {project.title}
           </Link>
-        </h3>
+        </h2>
         <p className="mt-1.5 max-w-xl text-sm text-paper/90 sm:text-base">
           {project.tagline}
         </p>

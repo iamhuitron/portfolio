@@ -36,7 +36,7 @@ Everything personal lives in one file: **`data/site.ts`**. Three fields are inte
 
 | Field | What happens if it's empty |
 |---|---|
-| `email` | The Contact page shows a visible "add your email" placeholder instead of a fake address |
+| `email` | The Contact page explains that direct email is not configured instead of showing a fake address |
 | `linkedin` | The LinkedIn row on Contact just doesn't render |
 | `resumeUrl` | The résumé button on About just doesn't render |
 

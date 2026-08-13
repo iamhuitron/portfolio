@@ -63,6 +63,7 @@
     background-color: var(--color-ink);
     color: var(--color-paper);
     font-family: var(--font-sans);
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
