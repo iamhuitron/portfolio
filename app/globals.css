@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+   Design tokens. The palette is deliberately not "dark UI + one accent":
+   each section of the site (home / projects / about / contact) carries
+   its own accent, the way calendar apps color-code categories — Home,
+   Projects, About and Contact each get a hue, and --color-accent always
+   points at whichever one is active. Base colors are a cool ledger-blue,
+   not a flat near-black, and paired with a warm off-white ink — a nod to
+   the accounting-ledger + scheduling-grid overlap in the actual work
+   this site shows off.
+------------------------------------------------------------------------ */
+@theme {
+  --color-ink: oklch(15% 0.025 258);
+  --color-ink-soft: oklch(20% 0.026 258);
+  --color-paper: oklch(95% 0.012 85);
+  --color-muted: oklch(64% 0.02 258);
+  --color-line: oklch(55% 0.02 258);
+
+  --color-marigold: oklch(78% 0.16 68);
+  --color-cobalt: oklch(70% 0.14 238);
+  --color-plum: oklch(66% 0.17 322);
+  --color-verdigris: oklch(75% 0.13 162);
+
+  --color-accent: var(--color-marigold);
+
+  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* next/font sets --font-fraunces / --font-space-grotesk / --font-jetbrains-mono
+   at runtime on <html> (see app/layout.tsx). "inline" tells Tailwind to
+   reference those variables directly instead of copying a static value. */
+@theme inline {
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* Per-page accent. Each layout.tsx sets data-theme on a wrapper div. */
+[data-theme="home"] {
+  --color-accent: var(--color-marigold);
+}
+[data-theme="projects"] {
+  --color-accent: var(--color-cobalt);
+}
+[data-theme="about"] {
+  --color-accent: var(--color-plum);
+}
+[data-theme="contact"] {
+  --color-accent: var(--color-verdigris);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Faint ruled-ledger texture, ambient across every page. Kept low-
+     contrast on purpose — it's texture, not a pattern to notice. */
+  body {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      oklch(55% 0.02 258 / 0.08) 0px,
+      oklch(55% 0.02 258 / 0.08) 1px,
+      transparent 1px,
+      transparent 44px
+    );
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  /* Underline that grows from the left on hover — used for inline text
+     links instead of a static text-decoration. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.35s var(--ease-signature);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  /* Fraunces gets noticeably more characterful — higher-contrast, more
+     ink-trap detail — at a high optical size. Reserved for the few big
+     display lines (hero name, page headlines) rather than every heading,
+     so the effect stays a deliberate accent instead of the default. */
+  .font-display-lg {
+    font-variation-settings:
+      "opsz" 120,
+      "SOFT" 20;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
