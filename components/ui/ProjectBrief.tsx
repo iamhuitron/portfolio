@@ -1,5 +1,4 @@
 import type { Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
 
 export function ProjectBrief({
   project,
@@ -12,8 +11,34 @@ export function ProjectBrief({
     ? project.technicalHighlights.slice(0, 3)
     : project.technicalHighlights;
 
+  if (compact) {
+    return (
+      <div className="mt-4 space-y-3">
+        <p className="text-xs leading-relaxed text-paper/85">
+          {project.solution}
+        </p>
+
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-accent">
+            Key Architecture &amp; Impact
+          </p>
+          <ul className="mt-1.5 space-y-1 text-xs leading-relaxed text-muted">
+            {highlights.map((highlight) => (
+              <li key={highlight} className="flex items-start gap-1.5">
+                <span className="text-accent shrink-0 font-mono" aria-hidden>
+                  +
+                </span>
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <dl className={cn("grid gap-5", compact ? "mt-5" : "mt-7")}>
+    <dl className="mt-7 grid gap-5">
       <div>
         <dt className="font-mono text-[10px] uppercase tracking-widest text-accent">
           Problem

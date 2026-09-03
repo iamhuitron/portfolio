@@ -9,19 +9,30 @@ export const SITE = {
   handle: "@iamhuitron",
   githubUsername: "iamhuitron",
   role: "Software Developer · Informatics Student at UNAM",
-  statusLabel: "Open to software internships & collaboration",
-  location: "Estado de México, México",
+  statusLabel: "Open to Software Engineering Internships & Junior Roles",
+  location: "Zumpango, Estado de México",
   university: "UNAM — FES Cuautitlán",
   degree: "Licenciatura en Informática",
 
-  // TODO: fill these in — left blank on purpose rather than guessed.
-  email: "",
-  linkedin: "",
-  resumeUrl: "",
+  email: "ianhuitron0687@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ian-miguel-delgado-huitron-18b035349/",
+  resumeUrl: "/cv",
+  phone: "+52 593 126 9253",
 
   github: "https://github.com/iamhuitron",
-  siteUrl: "https://portfolio.vercel.app", // TODO: swap for your real production domain
+  siteUrl: "https://portfolio.vercel.app",
 } as const;
+
+export const CORE_STACK = [
+  { name: "React Native / Expo", category: "Mobile" },
+  { name: "TypeScript", category: "Language" },
+  { name: "Next.js & React", category: "Web" },
+  { name: "Python", category: "Automation & Data" },
+  { name: "Java (POO)", category: "Systems" },
+  { name: "Go", category: "Systems" },
+  { name: "Zustand & MMKV", category: "Architecture" },
+  { name: "GitHub Actions (CI/CD)", category: "DevOps" },
+] as const;
 
 export const NAV_ITEMS: { href: string; label: string; theme: PageTheme }[] = [
   { href: "/", label: "Home", theme: "home" },

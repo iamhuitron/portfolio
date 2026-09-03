@@ -9,43 +9,59 @@ export function AboutPreview() {
       <Reveal>
         <div className="grid gap-8 border-t border-line/25 pt-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">About</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">Differentiator</p>
             <h2 className="mt-4 max-w-sm font-display text-[clamp(2rem,4vw,3.25rem)] font-medium leading-[1.03] text-paper">
-              Engineering with a practical bias.
+              Engineering with fiscal &amp; operational rigor.
             </h2>
           </div>
 
           <div className="max-w-2xl">
             <p className="text-lg leading-relaxed text-paper/90">
-              I am {SITE.name}, an Informatics student at {SITE.university} with
-              a background in accounting and reporting. That mix makes me care
-              about software that is useful in practice: clear workflows,
-              dependable data, and systems that handle edge cases well.
+              I am {SITE.fullName}, an Informatics student at {SITE.university}.
+              Before focusing on full-stack and mobile software, I worked in municipal government accounting and financial auditing.
             </p>
+            <p className="mt-3 text-base leading-relaxed text-muted">
+              That experience fundamentally shapes my engineering philosophy: I don&apos;t just build interfaces—I build software that respects strict business rules, guarantees data integrity, automates tedious manual processes, and stays rock-solid under edge cases.
+            </p>
+
             <div className="mt-8 grid gap-5 border-y border-line/20 py-5 sm:grid-cols-3">
               {[
-                ["01", "Software engineering", "End-to-end product work"],
-                ["02", "Automation + data", "Turning manual work into systems"],
-                ["03", "AI + FinTech", "Applied, responsible experimentation"],
+                ["01", "Mobile & Web", "React Native, Expo & Next.js architectures"],
+                ["02", "Automation & Data", "Python & ReportLab automating fiscal workflows"],
+                ["03", "Systems & Logic", "Backtracking algorithms, OOP Java & Go"],
               ].map(([number, title, detail]) => (
                 <div key={number}>
                   <p className="font-mono text-[11px] text-accent">{number}</p>
-                  <p className="mt-2 text-sm text-paper">{title}</p>
+                  <p className="mt-2 text-sm font-medium text-paper">{title}</p>
                   <p className="mt-1 text-xs leading-relaxed text-muted">{detail}</p>
                 </div>
               ))}
             </div>
-            <Link
-              href="/about"
-              className="group mt-7 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-300 hover:text-accent"
-            >
-              Read the full story
-              <ArrowRight
-                size={13}
-                className="transition-transform duration-300 group-hover:translate-x-0.5"
-                aria-hidden
-              />
-            </Link>
+
+            <div className="mt-7 flex flex-wrap items-center gap-6">
+              <Link
+                href="/about"
+                className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-300 hover:text-accent"
+              >
+                Read full background
+                <ArrowRight
+                  size={13}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </Link>
+              <Link
+                href="/cv"
+                className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent transition-colors duration-300 hover:underline"
+              >
+                View full CV / Résumé
+                <ArrowRight
+                  size={13}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </Reveal>

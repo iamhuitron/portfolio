@@ -25,31 +25,40 @@ export function Navigation() {
           {SITE.handle}
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
-          {NAV_ITEMS.map((item) => {
-            const active = isActive(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "group flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-colors duration-300",
-                  active ? THEME_TEXT_CLASS[item.theme] : "text-muted hover:text-paper",
-                )}
-                aria-current={active ? "page" : undefined}
-              >
-                <span
+        <div className="hidden items-center gap-6 md:flex">
+          <nav aria-label="Primary navigation" className="flex items-center gap-7">
+            {NAV_ITEMS.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
                   className={cn(
-                    "h-1.5 w-1.5 rounded-full transition-opacity duration-300",
-                    THEME_DOT_CLASS[item.theme],
-                    active ? "opacity-100" : "opacity-30 group-hover:opacity-70",
+                    "group flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-colors duration-300",
+                    active ? THEME_TEXT_CLASS[item.theme] : "text-muted hover:text-paper",
                   )}
-                />
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+                  aria-current={active ? "page" : undefined}
+                >
+                  <span
+                    className={cn(
+                      "h-1.5 w-1.5 rounded-full transition-opacity duration-300",
+                      THEME_DOT_CLASS[item.theme],
+                      active ? "opacity-100" : "opacity-30 group-hover:opacity-70",
+                    )}
+                  />
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <Link
+            href="/cv"
+            className="inline-flex items-center gap-1.5 rounded-sm border border-accent/40 bg-accent/10 px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-paper transition-all hover:border-accent hover:bg-accent hover:text-ink"
+          >
+            CV / Résumé
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -87,6 +96,14 @@ export function Navigation() {
               </Link>
             );
           })}
+          <Link
+            href="/cv"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 border-t border-line/30 py-3.5 font-mono text-sm uppercase tracking-widest text-accent font-medium"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            CV / Résumé
+          </Link>
         </nav>
       )}
     </header>
