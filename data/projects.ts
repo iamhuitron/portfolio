@@ -57,6 +57,30 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "cfdi-sentinel",
+    title: "CFDI Sentinel",
+    tagline: "In-browser CFDI 4.0 fiscal auditor & SAT Art. 69-B blacklist sentinel",
+    problem:
+      "Mexican SMEs and accountants manually reconcile hundreds of XML invoices while facing audit discrepancies and severe legal liabilities from unrecognized EFOS shell-company suppliers.",
+    solution:
+      "A 100% client-side web application that audits bulk CFDI 4.0 XMLs and ZIPs directly in browser memory, cross-checking RFCs against the official SAT Article 69-B blacklist, validating Anexo 20 math, calculating DIOT obligations, and exporting multi-sheet Excel workbooks with zero server exposure.",
+    technicalHighlights: [
+      "Privacy-first architecture: In-memory XML parsing and ZIP decompression via Web Workers with zero server dependencies",
+      "Regulatory intelligence: Instant offline O(1) cross-reference against SAT Article 69-B EFOS blacklist (Definitivo, Presunto)",
+      "Audit engine: Algorithmic validation for Anexo 20 tax formulas, RFC regex compliance, and duplicate UUID detection",
+      "Financial automation: Automated VAT reconciliation, withholding calculations, and multi-sheet Excel (.xlsx) workbook generation",
+    ],
+    categories: ["FinTech", "Data Analytics", "Software Engineering"],
+    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Fast XML Parser", "SheetJS", "Vitest"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/cfdi-sentinel",
+    },
+  },
+  {
     slug: "whatsapp-networking-hub",
     title: "WhatsApp Networking Hub",
     tagline: "Client-side networking directory from WhatsApp group chats",
