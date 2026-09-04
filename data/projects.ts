@@ -51,7 +51,35 @@ export const PROJECTS: Project[] = [
     selected: true,
     year: "2025–2026",
     images: { useReadme: true },
-    links: { github: "https://github.com/iamhuitron/UniSched-Optimizer" },
+    links: {
+      github: "https://github.com/iamhuitron/UniSched-Optimizer",
+      live: "https://uni-sched-optimizer.vercel.app/",
+    },
+  },
+  {
+    slug: "whatsapp-networking-hub",
+    title: "WhatsApp Networking Hub",
+    tagline: "Client-side networking directory from WhatsApp group chats",
+    problem:
+      "Networking in large WhatsApp community groups is chaotic and unstructured, with member introductions buried across thousands of messages.",
+    solution:
+      "A 100% client-side web application that parses exported chat logs locally in browser memory, building a searchable directory with one-click social profiles without storing data on any server.",
+    technicalHighlights: [
+      "Privacy-first architecture: Zero backend and zero telemetry — processed entirely in-browser via File API",
+      "Local persistence: Client-side storage using IndexedDB and localStorage",
+      "Performance: High-speed in-memory text parsing and normalization without external API latency",
+      "Data portability: Export filtered networking sessions directly to CSV and Excel",
+    ],
+    categories: ["Web Development", "Privacy", "Productivity"],
+    techStack: ["Next.js", "TypeScript", "React", "IndexedDB", "Tailwind CSS"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/whatsapp-networking-hub",
+      live: "https://whatsapp-networking-hub.vercel.app",
+    },
   },
   {
     slug: "Flowday",
@@ -73,7 +101,10 @@ export const PROJECTS: Project[] = [
     selected: true,
     year: "2025",
     images: { useReadme: true },
-    links: { github: "https://github.com/iamhuitron/Flowday" },
+    links: {
+      github: "https://github.com/iamhuitron/Flowday",
+      live: "https://flowday-rho.vercel.app/",
+    },
   },
   {
     slug: "Statix",
@@ -139,7 +170,10 @@ export const PROJECTS: Project[] = [
     selected: true,
     year: "2025",
     images: { useReadme: true },
-    links: { github: "https://github.com/iamhuitron/ai-insights" },
+    links: {
+      github: "https://github.com/iamhuitron/ai-insights",
+      live: "https://iamhuitron.github.io/ai-insights/",
+    },
   },
   {
     slug: "titulacion-ai",
@@ -161,7 +195,10 @@ export const PROJECTS: Project[] = [
     selected: true,
     year: "2025",
     images: { useReadme: true },
-    links: { github: "https://github.com/iamhuitron/titulacion-ai" },
+    links: {
+      github: "https://github.com/iamhuitron/titulacion-ai",
+      live: "https://2026-2-fes-ia-hack-hackathon-plataf.vercel.app/",
+    },
   },
   {
     slug: "java-rpg-game",
