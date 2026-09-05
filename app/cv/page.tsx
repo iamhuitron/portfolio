@@ -168,6 +168,32 @@ export default function CvPage() {
               </ul>
             </div>
 
+            {/* CFDI Sentinel */}
+            <div>
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-display text-base font-semibold text-paper print:text-black">
+                  CFDI Sentinel — Auditor Fiscal In-Browser y Centinela SAT Art. 69-B
+                </h3>
+                <span className="font-mono text-xs text-muted print:text-neutral-600">
+                  2026 · Next.js · React 19 · Web Workers · FinTech
+                </span>
+              </div>
+              <p className="mt-1 font-mono text-xs text-accent print:text-neutral-700">
+                Next.js · TypeScript · Web Workers · Fast-XML · Tailwind CSS · Anexo 20 SAT
+              </p>
+              <ul className="mt-2 list-inside list-disc space-y-1 text-xs leading-relaxed text-muted print:text-neutral-800">
+                <li>
+                  Plataforma web de auditoría fiscal masiva que audita paquetes ZIP y XMLs de CFDI 4.0 directamente en memoria de navegador, garantizando 100% de privacidad y cero costo de servidor.
+                </li>
+                <li>
+                  Procesamiento en segundo plano mediante Web Workers para descompresión y parseo concurrente de alta velocidad sin degradar la tasa de refresco (60fps) de la interfaz de usuario.
+                </li>
+                <li>
+                  Motor de búsqueda offline O(1) contra listas negras oficiales de EFOS (SAT Art. 69-B), validación algorítmica de fórmulas de Anexo 20 y conciliación automática de DIOT.
+                </li>
+              </ul>
+            </div>
+
             {/* UniSched */}
             <div>
               <div className="flex flex-wrap items-baseline justify-between gap-2">

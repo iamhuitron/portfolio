@@ -81,6 +81,30 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "cfdi-sat-engine",
+    title: "CFDI SAT Engine",
+    tagline: "High-performance Python fiscal auditor & SAT Art. 69-B (EFOS) sentinel",
+    problem:
+      "Developers, ERPs, and automated accounting workflows need a lightweight, ultra-fast Python engine to audit CFDI 4.0 XMLs and detect blacklisted suppliers without heavy cloud dependencies.",
+    solution:
+      "A pure standard-library Python package and CLI that validates Anexo 20 math, checks RFC validity, screens against the official SAT Article 69-B EFOS blacklist in O(1) time, and generates automated audit reports.",
+    technicalHighlights: [
+      "Zero-dependency architecture: Built strictly on Python 3.10+ standard library (xml.etree, decimal, csv, re)",
+      "High-throughput screening: O(1) in-memory hash verification against official Mexican tax fraud blacklists",
+      "Rigorous Anexo 20 compliance: High-precision decimal arithmetic validation for tax withholding and VAT transfers",
+      "Automated CI/CD: Multi-version matrix testing with GitHub Actions and comprehensive unit test coverage",
+    ],
+    categories: ["FinTech", "Automation", "Software Engineering"],
+    techStack: ["Python", "XML", "SAT CFDI 4.0", "GitHub Actions", "CLI"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/cfdi-sat-engine",
+    },
+  },
+  {
     slug: "whatsapp-networking-hub",
     title: "WhatsApp Networking Hub",
     tagline: "Client-side networking directory from WhatsApp group chats",
