@@ -62,13 +62,19 @@ export default function CvPage() {
                 {SITE.fullName}
               </h1>
               <p className="mt-1 font-mono text-sm uppercase tracking-wider text-accent print:text-neutral-700">
-                Desarrollador de Software · Estudiante de Informática en la UNAM
+                Desarrollador de Software · UNAM Informática · Google Student Ambassador 2026
               </p>
             </div>
 
-            <div className="inline-flex items-center gap-1.5 self-start rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-emerald-400 print:hidden">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              Disponible para prácticas / Junior
+            <div className="flex flex-wrap items-center gap-2 self-start print:hidden">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-blue-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+                Google Student Ambassador 2026
+              </div>
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-emerald-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                Disponible para prácticas / Junior
+              </div>
             </div>
           </div>
 
@@ -278,14 +284,28 @@ export default function CvPage() {
           </div>
         </section>
 
-        {/* Educación */}
+        {/* Educación y Distinciones */}
         <section className="mt-6 border-b border-line/25 pb-6 print:border-neutral-300">
           <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent print:text-neutral-800">
             <GraduationCap size={14} />
-            Educación
+            Educación y Distinciones
           </h2>
 
           <div className="mt-3 space-y-3">
+            <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-line/15 pb-2">
+              <div>
+                <h3 className="text-sm font-semibold text-paper print:text-black">
+                  Estudiante Embajador de Google 2026 (Google Student Ambassador)
+                </h3>
+                <p className="text-xs text-muted print:text-neutral-700">
+                  Google Developers / Google for Education — Liderazgo y difusión de tecnología, talleres e IA en la UNAM
+                </p>
+              </div>
+              <span className="font-mono text-xs text-blue-400 font-semibold print:text-neutral-600">
+                2026 – Actualidad
+              </span>
+            </div>
+
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
                 <h3 className="text-sm font-semibold text-paper print:text-black">
