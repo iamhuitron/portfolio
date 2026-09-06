@@ -78,6 +78,32 @@ export const PROJECTS: Project[] = [
     images: { useReadme: true },
     links: {
       github: "https://github.com/iamhuitron/cfdi-sentinel",
+      live: "https://xaol-website.vercel.app/demo/sat-sentinel.html",
+    },
+  },
+  {
+    slug: "pyme-manager-core",
+    title: "PyME Manager Core",
+    tagline: "Deterministic TypeScript & SQL retail engine with SAT Anexo 20 compliance",
+    problem:
+      "Small-to-medium retail businesses and auto-parts counters face inventory desynchronization and cash-register rounding errors due to weak database constraints and floating-point math.",
+    solution:
+      "A lightweight, deterministic core engine built on integer-cents financial arithmetic, ACID-compliant relational schemas (PostgreSQL / SQLite), atomic stock checks, and Mexican SAT Anexo 20 tax formulas.",
+    technicalHighlights: [
+      "Integer-cents precision: Complete elimination of IEEE 754 float drift across lines and discounts",
+      "Relational DDL: Complete PostgreSQL and SQLite schemas with CHECK constraints and POS indexes",
+      "Tax reconciliation: Multi-rate VAT aggregator (16%, 8% border, 0%, exempt) conforming to SAT rules",
+      "Quality engineering: 100% automated test pass rate using Node.js native test runner and GitHub Actions CI",
+    ],
+    categories: ["Software Engineering", "FinTech", "Databases"],
+    techStack: ["TypeScript", "PostgreSQL", "SQLite", "SAT Anexo 20", "Node.js", "CI/CD"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/Xaol-Studio/pyme-manager-core",
+      live: "https://xaol-website.vercel.app/demo/pyme-manager.html",
     },
   },
   {

@@ -8,9 +8,9 @@ export const SITE = {
   fullName: "Ian Miguel Delgado Huitron",
   handle: "@iamhuitron",
   githubUsername: "iamhuitron",
-  role: "Software Developer · Informatics at UNAM · Google Student Ambassador 2026",
-  statusLabel: "Google Student Ambassador 2026 · Open to Internships & Junior Roles",
-  location: "Zumpango, Estado de México",
+  role: "Software Engineer & Co-Founder at XAOL Software Studio · Informatics at UNAM · Google Student Ambassador 2026",
+  statusLabel: "Co-Founder @Xaol-Studio · Google Student Ambassador 2026 · Open to Select Roles",
+  location: "CDMX / Estado de México",
   university: "UNAM — FES Cuautitlán",
   degree: "Licenciatura en Informática",
 
@@ -20,7 +20,7 @@ export const SITE = {
   phone: "+52 593 126 9253",
 
   github: "https://github.com/iamhuitron",
-  siteUrl: "https://portfolio.vercel.app",
+  siteUrl: "https://portfolio-pink-five-jaih91sunw.vercel.app",
 } as const;
 
 export const CORE_STACK = [

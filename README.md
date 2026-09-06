@@ -1,6 +1,22 @@
-# portfolio
+# Ian Miguel Delgado Huitrón — Personal Portfolio
 
-Miguel Delgado's personal portfolio — Next.js 16, React 19, TypeScript, Tailwind CSS v4. Project data pulls live from the GitHub REST API (stars, primary language, last commit), so updating a repo updates the site automatically.
+<p align="left">
+  <strong>Engineering Portfolio & Live Project Registry</strong><br>
+  Designed & Built by <a href="https://github.com/iamhuitron"><strong>Ian Miguel Delgado Huitrón</strong></a> · Co-Founder at <a href="https://github.com/Xaol-Studio"><strong>@Xaol-Studio</strong></a>
+</p>
+
+<p align="left">
+  <a href="https://portfolio-pink-five-jaih91sunw.vercel.app/"><img src="https://img.shields.io/badge/Production_URL-portfolio--pink--five--jaih91sunw.vercel.app-059669?style=flat-square&logo=vercel&logoColor=white" alt="Live Site" /></a>
+  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/Author-@iamhuitron-1e293b?style=flat-square&logo=github&logoColor=white" alt="Author" /></a>
+  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/Studio-@Xaol--Studio-059669?style=flat-square&logo=github&logoColor=white" alt="Studio" /></a>
+  <img src="https://img.shields.io/badge/Next.js-16%20(Turbopack)-black?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Tailwind-v4%20(CSS--First)-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS v4" />
+</p>
+
+> Miguel Delgado's personal engineering portfolio — Next.js 16, React 19, TypeScript, Tailwind CSS v4. Project data pulls live from the GitHub REST API (stars, primary language, last commit), so updating a repo updates the site automatically.
+
+---
 
 ## Stack
 
