@@ -31,7 +31,7 @@ export default function CvPage() {
       <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-line/25 pb-6 print:hidden">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
+          className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
         >
           <ArrowLeft
             size={14}
@@ -44,7 +44,7 @@ export default function CvPage() {
           <button
             type="button"
             onClick={handlePrint}
-            className="inline-flex items-center gap-2 rounded-sm bg-accent px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-sm bg-accent px-4 py-2 font-mono text-xs uppercase tracking-widest text-ink transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             <Download size={14} />
             Imprimir / Guardar en PDF
@@ -86,7 +86,7 @@ export default function CvPage() {
             </span>
             <a
               href={`mailto:${SITE.email}`}
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               <Mail size={13} className="text-accent print:text-neutral-600" />
               {SITE.email}
@@ -99,7 +99,7 @@ export default function CvPage() {
               href={SITE.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               <GithubIcon size={13} />
               github.com/{SITE.githubUsername}
@@ -108,7 +108,7 @@ export default function CvPage() {
               href={SITE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-accent print:text-neutral-800 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               <LinkedinIcon size={13} />
               LinkedIn
