@@ -28,7 +28,7 @@ export function CopyButton({
       type="button"
       onClick={handleCopy}
       className={cn(
-        "inline-flex shrink-0 items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-300 hover:text-paper",
+        "inline-flex shrink-0 items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-300 hover:text-paper rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink",
         className,
       )}
       aria-label="Copy email address"

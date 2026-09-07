@@ -35,7 +35,7 @@ export function ProjectRow({ project, liveData, image }: ProjectRowProps) {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors duration-300 hover:text-accent"
+            className="transition-colors duration-300 hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
             {project.title}
           </Link>
@@ -79,6 +79,8 @@ export function ProjectRow({ project, liveData, image }: ProjectRowProps) {
         rel="noopener noreferrer"
         className="block sm:mt-1"
         aria-label={`${linkLabel}: ${project.title}`}
+        tabIndex={-1}
+        aria-hidden="true"
       >
         <ProjectVisual project={project} image={image} className="w-full" />
       </Link>
