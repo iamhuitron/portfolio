@@ -82,6 +82,30 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "nomina-matrix",
+    title: "Nomina-Matrix",
+    tagline: "Mexican payroll reverse-engineering (Net-to-Gross) & IMSS 2026 labor suite",
+    problem:
+      "Mexican businesses and HR teams struggle to calculate net-to-gross salaries under complex non-linear tax curves while underestimating escalating IMSS 2026 social costs and severance liabilities.",
+    solution:
+      "A high-precision client-side payroll engine that inverts progressive income tax curves (ISR Art. 96) using binary search, computes granular 5-branch IMSS employer/employee quotas with 2026 progressive pension reforms, and simulates constitutional severance packages with statutory tax exemptions.",
+    technicalHighlights: [
+      "Algorithmic optimization: Sub-cent binary search convergence resolving Net-to-Gross salaries in < 25 iterations",
+      "Regulatory intelligence: Full compliance with 2026 Mexican social security reforms (IMSS RCV progressive employer tier)",
+      "Labor law compliance: Statutory LFT termination simulator (Constitutional 3-month indemnity, 20 days/yr, and 90-UMA tax exemptions)",
+      "Financial automation: Batch SME team payroll audit, simulated CFDI Nómina 1.2 vouchers, and multi-tab Excel (.xlsx) export",
+    ],
+    categories: ["FinTech", "Algorithms", "Software Engineering"],
+    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "SheetJS", "Vitest"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/nomina-matrix",
+    },
+  },
+  {
     slug: "pyme-manager-core",
     title: "PyME Manager Core",
     tagline: "Deterministic TypeScript & SQL retail engine with SAT Anexo 20 compliance",
