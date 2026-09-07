@@ -7,6 +7,7 @@ import {
   FileSpreadsheet,
   Radio,
   ShieldAlert,
+  Zap,
   Terminal,
 } from "lucide-react";
 import type { Project } from "@/data/projects";
@@ -108,6 +109,46 @@ function ProjectGraphicFallback({ project }: { project: Project }) {
         <div className="flex items-center justify-between text-[10px] text-muted border-t border-line/20 pt-2">
           <span>React 19 + Fast-XML</span>
           <span>100% In-Memory Privacy</span>
+        </div>
+      </div>
+    );
+  }
+
+    if (project.slug === "nomina-matrix") {
+    return (
+      <div className="flex h-full w-full flex-col justify-between bg-gradient-to-br from-ink to-ink-soft p-5 font-mono text-xs">
+        <div className="flex items-center justify-between border-b border-line/25 pb-2.5">
+          <div className="flex items-center gap-2 text-accent">
+            <Zap size={14} className="text-emerald-400" />
+            <span className="text-[11px] uppercase tracking-wider font-semibold">
+              Nomina-Matrix · Net-to-Gross
+            </span>
+          </div>
+          <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">
+            IMSS Reform 2026
+          </span>
+        </div>
+
+        <div className="my-auto space-y-2">
+          <div className="rounded border border-line/30 bg-ink/60 p-2.5 space-y-1">
+            <div className="flex items-center justify-between text-[11px] text-paper">
+              <span>Búsqueda Binaria &lt; 25 Pasos</span>
+              <span className="text-emerald-400">Δ &lt; bash.01 Centavos</span>
+            </div>
+            <p className="text-[10px] text-muted">
+              ISR Art. 96 · IMSS 5 Ramos · Infonavit 5% · Finiquitos LFT
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between text-[10px] text-muted px-1">
+            <span className="text-accent">⚡ Multiplicador Costo Social 1.58x</span>
+            <span className="text-paper">Export Multi-tab .XLSX</span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between text-[10px] text-muted border-t border-line/20 pt-2">
+          <span>React 19 + Next.js</span>
+          <span>100% In-Browser Privacy</span>
         </div>
       </div>
     );
