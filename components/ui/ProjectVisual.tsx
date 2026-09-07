@@ -297,7 +297,7 @@ function ProjectGraphicFallback({ project }: { project: Project }) {
       </div>
 
       <div className="my-auto space-y-1.5 p-2 text-[11px] text-paper">
-        <p className="text-muted text-[10px]">// Tech Stack</p>
+        <p className="text-muted text-[10px]">{`// Tech Stack`}</p>
         <div className="flex flex-wrap gap-1">
           {project.techStack.map((tech) => (
             <span

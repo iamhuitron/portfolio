@@ -30,6 +30,8 @@ export function ProductCard({
         rel="noopener noreferrer"
         className="block"
         aria-label={`${linkLabel}: ${project.title}`}
+        tabIndex={-1}
+        aria-hidden="true"
       >
         <ProjectVisual project={project} image={image} />
       </Link>
@@ -44,7 +46,8 @@ export function ProductCard({
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-300 hover:text-accent"
+              aria-label={`${linkLabel}: ${project.title}`}
+              className="transition-colors duration-300 hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               {project.title}
             </Link>
