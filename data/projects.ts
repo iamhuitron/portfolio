@@ -32,6 +32,28 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "xaol-ai-builder",
+    title: "XAOL AI Builder",
+    tagline: "AI-powered B2B consultant using Gemini Live API",
+    problem:
+      "Small businesses (PyMEs) need immediate, customized software quoting and consultation without waiting days for an agency response.",
+    solution:
+      "An ambitious Next.js application leveraging the Gemini Live API via WebSockets and ephemeral tokens to deliver an interactive, real-time AI architect that consults clients and generates ROI estimates.",
+    technicalHighlights: [
+      "Real-time AI: Native WebSocket integration with Gemini 3.1 Flash Live Preview",
+      "Security: Ephemeral token generation for secure client-side model access",
+      "UI/UX: Glassmorphism design system using Tailwind CSS and Framer Motion",
+      "Architecture: Next.js 15 App Router with serverless API route provisioning"
+    ],
+    categories: ["Web Development", "AI/Automation", "Systems & Networking"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Gemini API"],
+    featured: true,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: { github: "https://github.com/iamhuitron/xaol-ai-builder" },
+  },
+  {
     slug: "UniSched-Optimizer",
     title: "UniSched Optimizer",
     tagline: "Conflict-free class schedules, solved automatically with backtracking",
