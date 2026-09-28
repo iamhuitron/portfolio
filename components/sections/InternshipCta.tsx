@@ -23,17 +23,17 @@ export function InternshipCta() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-24 pt-4 sm:pb-32">
       <Reveal>
-        <div className="grid gap-8 border-y border-line/25 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="grid gap-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 sm:p-12 sm:gap-12 shadow-2xl lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               Immediate Availability
             </div>
             <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,4.25rem)] font-medium leading-[0.98] text-paper">
-              Ready to build, learn, and deliver.
+              Ready to build, scale, and deliver.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              I am actively seeking a Software Engineering internship or Junior developer position where I can ship clean, reliable code, master complex architectures, and solve real business problems.
+              I am actively seeking Software Engineering roles and I am open to taking on freelance projects through my agency, XAOL Studio. Whether you need to scale your engineering team or build a digital product from scratch, I deliver clean, reliable, and scalable software.
             </p>
             <p className="mt-3 font-mono text-xs text-muted">
               📍 {SITE.location} · Open to Remote, Hybrid &amp; On-Site
