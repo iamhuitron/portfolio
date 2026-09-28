@@ -109,7 +109,7 @@ export function Hero() {
       {/* Core Engineering Stack & ATS Keyword Snapshot */}
       <motion.div
         {...fadeUp(0.5)}
-        className="mt-12 rounded-sm border border-line/35 bg-ink-soft/30 p-5 sm:p-6"
+        className="mt-12 rounded-sm border border-line/35 bg-white/5 backdrop-blur-md border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] p-5 sm:p-6"
       >
         <div className="flex flex-col gap-3 border-b border-line/25 pb-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">

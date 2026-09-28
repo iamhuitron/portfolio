@@ -64,7 +64,7 @@ export async function FeaturedProjects() {
 
       {featured && (
         <Reveal delay={0.08} className="mt-10">
-          <article className="group grid overflow-hidden rounded-sm border border-line/35 bg-ink-soft/40 transition-colors duration-300 hover:border-accent md:grid-cols-[1.08fr_0.92fr]">
+          <article className="group grid overflow-hidden rounded-sm border border-line/35 bg-white/5 backdrop-blur-md transition-colors duration-300 hover:border-accent md:grid-cols-[1.08fr_0.92fr]">
             <Link
               href={featured.project.links.live ?? featured.project.links.github}
               target="_blank"

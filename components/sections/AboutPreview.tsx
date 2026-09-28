@@ -24,7 +24,7 @@ export function AboutPreview() {
               That experience fundamentally shapes my engineering philosophy: I don&apos;t just build interfaces—I build software that respects strict business rules, guarantees data integrity, automates tedious manual processes, and stays rock-solid under edge cases.
             </p>
 
-            <div className="mt-8 grid gap-5 border-y border-line/20 py-5 sm:grid-cols-3">
+            <div className="mt-8 grid gap-5 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-xl sm:grid-cols-3">
               {[
                 ["01", "Mobile & Web", "React Native, Expo & Next.js architectures"],
                 ["02", "Automation & Data", "Python & ReportLab automating fiscal workflows"],

@@ -23,7 +23,7 @@ export function ProductCard({
   const linkLabel = project.links.live ? "View product" : "View repository";
 
   return (
-    <article className="group">
+    <article className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 shadow-lg transition-all hover:scale-[1.02] hover:border-accent/50">
       <Link
         href={href}
         target="_blank"
