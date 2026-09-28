@@ -59,6 +59,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Person", "name": "Miguel Delgado Huitrón", "url": "https://portfolio-pink-five-jaih91sunw.vercel.app", "jobTitle": "Software Engineer", "worksFor": { "@type": "Organization", "name": "XAOL Studio" }, "alumniOf": "UNAM FES Cuautitlán", "sameAs": ["https://github.com/iamhuitron", "https://www.linkedin.com/in/iamhuitron"] }) }} />
         <MotionConfig reducedMotion="user">
           <a
             href="#main-content"
