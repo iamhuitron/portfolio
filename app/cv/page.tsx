@@ -223,6 +223,32 @@ export default function CvPage() {
               </ul>
             </div>
 
+            {/* SAT Data Pipeline & Banxico Series */}
+            <div>
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-display text-base font-semibold text-paper print:text-black">
+                  SAT Data Pipeline &amp; Banxico Series — Ingesta Masiva y Analytics OLAP
+                </h3>
+                <span className="font-mono text-xs text-muted print:text-neutral-600">
+                  2026 · Python · DuckDB · Apache Arrow · Parquet
+                </span>
+              </div>
+              <p className="mt-1 font-mono text-xs text-accent print:text-neutral-700">
+                Python 3.12 · DuckDB · Apache Arrow (PyArrow) · Parquet · Anexo 20 SAT · API Banxico SIE
+              </p>
+              <ul className="mt-2 list-inside list-disc space-y-1 text-xs leading-relaxed text-muted print:text-neutral-800">
+                <li>
+                  Desarrollo de data lakehouse fiscal y macroeconómico: extracción streaming de comprobantes CFDI 4.0 XML e indicadores del Banco de México (USD/MXN, TIIE 28d, UDIS, INPC).
+                </li>
+                <li>
+                  Lotes columnares zero-copy con Apache Arrow particionados en Parquet y base de datos analítica embebida DuckDB para consultas SQL analíticas de sub-segundo sin dependencias externas.
+                </li>
+                <li>
+                  Modelado econométrico automatizado (tasa de interés real vía ecuación de Fisher, inflación interanual y correlaciones) y auditoría contra listas negras del SAT (Art. 69-B EFOS).
+                </li>
+              </ul>
+            </div>
+
             {/* Statix & Automatización */}
             <div>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -230,15 +256,15 @@ export default function CvPage() {
                   Statix — Automatización de Auditorías Fiscales y Reportes
                 </h3>
                 <span className="font-mono text-xs text-muted print:text-neutral-600">
-                  2025 · Python · Streamlit · ReportLab
+                  2025–2026 · Python · Streamlit · ReportLab · 42 tests pytest
                 </span>
               </div>
               <p className="mt-1 font-mono text-xs text-accent print:text-neutral-700">
-                Python · Streamlit · ReportLab · Pandas · Microsoft Excel
+                Python · Streamlit · ReportLab · Pandas · Microsoft Excel · Pytest
               </p>
               <ul className="mt-2 list-inside list-disc space-y-1 text-xs leading-relaxed text-muted print:text-neutral-800">
                 <li>
-                  Plataforma analítica nacida de la experiencia directa en auditoría gubernamental: automatiza la conciliación de facturas y cotejo de registros fiscales.
+                  Plataforma analítica nacida de la experiencia directa en auditoría gubernamental: automatiza la conciliación de facturas y cotejo de registros fiscales con 42 pruebas unitarias automatizadas.
                 </li>
                 <li>
                   Desarrollo de scripts con la librería ReportLab para la generación programática de dictámenes y reportes PDF a partir de datos estructurados, suprimiendo tareas repetitivas de hoja de cálculo.
@@ -379,7 +405,7 @@ export default function CvPage() {
                 Dominio Contable &amp; Datos
               </p>
               <p className="mt-1 text-paper/90 print:text-neutral-800">
-                Auditoría financiera, conciliación de cuentas, paquetería contable Aspel, ReportLab (automatización PDF), Microsoft Excel avanzado
+                Ingeniería de datos (DuckDB OLAP, Apache Arrow, Parquet), auditoría fiscal y financiera, conciliación de cuentas, paquetería contable Aspel, ReportLab (automatización PDF), Microsoft Excel avanzado
               </p>
             </div>
             <div>

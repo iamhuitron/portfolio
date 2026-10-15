@@ -32,6 +32,78 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "sat-data-pipeline",
+    title: "SAT Data Pipeline",
+    tagline: "XML-to-Parquet lakehouse & DuckDB analytics engine for Mexican SAT CFDI 4.0 invoices",
+    problem:
+      "Mexican businesses, tax auditors, and accounting firms process tens of thousands of CFDI 4.0 XML invoices monthly, but lack scalable infrastructure to query fiscal data or screen for Article 69-B (EFOS) shell suppliers.",
+    solution:
+      "A high-performance Python fiscal data lakehouse that extracts raw CFDI 4.0 XMLs, batches records via Apache Arrow, generates Hive-partitioned Parquet datasets, screens against SAT EFOS blacklists in O(1) time, and runs sub-second analytical SQL via DuckDB.",
+    technicalHighlights: [
+      "Streaming XML ETL: Memory-constant chunked parsing via lxml with Anexo 20 namespace handling",
+      "Columnar storage: Zero-copy Apache Arrow batching into Hive-partitioned Parquet (year/month)",
+      "Embedded OLAP: Sub-second analytical SQL queries over hundreds of thousands of invoices via DuckDB",
+      "Fiscal risk engine: O(1) hash cross-referencing against official SAT Article 69-B blacklists",
+    ],
+    categories: ["Data Engineering", "FinTech", "Databases"],
+    techStack: ["Python", "DuckDB", "Apache Arrow", "Parquet", "lxml", "SAT CFDI 4.0", "pytest"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/sat-data-pipeline",
+    },
+  },
+  {
+    slug: "banxico-series-pipeline",
+    title: "Banxico Series Pipeline",
+    tagline: "Automated econometric ETL & time-series analytics engine for Mexican central bank data",
+    problem:
+      "Financial analysts, economists, and algorithmic traders in Mexico deal with fragmented macroeconomic indicators (USD/MXN FIX, TIIE 28d, UDIS, INPC) spread across slow central bank portals without a unified analytical store.",
+    solution:
+      "An automated time-series ETL pipeline and econometric engine that ingests Mexican central bank (Banxico SIE) indicators, stores them in an embedded DuckDB lake with Apache Arrow, and calculates real-time financial metrics like YoY inflation, real interest rates (Fisher equation), and asset correlations.",
+    technicalHighlights: [
+      "Macroeconomic data ingestion: Robust HTTP ETL for Banxico SIE series with token authentication & fallback caching",
+      "Econometric modeling: Automated Fisher equation computation (nominal TIIE vs. YoY INPC) and cross-series Pearson correlation matrices",
+      "Zero-copy analytics: Fast bulk ingestion and Parquet partitioning using Apache Arrow and DuckDB OLAP",
+      "Developer CLI: Clean CLI interface with JSON, tabular, and Parquet export capabilities",
+    ],
+    categories: ["Data Engineering", "Econometrics", "FinTech"],
+    techStack: ["Python", "DuckDB", "Apache Arrow", "Parquet", "Econometrics", "pytest"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/banxico-series-pipeline",
+    },
+  },
+  {
+    slug: "pyme-data-analytics",
+    title: "PyME Data Analytics",
+    tagline: "Transactional retail data science & inventory intelligence engine for Mexican PyMEs",
+    problem:
+      "Mexican small-and-medium businesses (PyMEs) lack enterprise data science teams to optimize stock levels, prevent inventory stockouts, or segment customer purchasing habits, relying instead on manual intuition.",
+    solution:
+      "A zero-cost transactional data analytics engine that ingests retail sales and customer histories to produce automated RFM customer segmentation, ABC Pareto (80/20) inventory categorization, Market Basket association rules (Support, Confidence, Lift), and Reorder Point (ROP) inventory safety stock calculations.",
+    technicalHighlights: [
+      "Customer segmentation: Quantile-based RFM (Recency, Frequency, Monetary) scoring with automated cohort categorization (Champions, At Risk, Hibernating)",
+      "Inventory optimization: ABC Pareto classification and statistical Reorder Point (ROP + Daily Consumption) forecasting",
+      "Market Basket analysis: Apriori association rule mining computing Confidence and Lift to identify cross-selling item pairs",
+      "Storage & CLI: Dual DuckDB SQL & Parquet persistence with full interactive CLI reporting",
+    ],
+    categories: ["Data Analytics", "Data Science", "FinTech"],
+    techStack: ["Python", "DuckDB", "Apache Arrow", "Data Science", "RFM Analysis", "pytest"],
+    featured: false,
+    selected: true,
+    year: "2026",
+    images: { useReadme: true },
+    links: {
+      github: "https://github.com/iamhuitron/pyme-data-analytics",
+    },
+  },
+  {
     slug: "UniSched-Optimizer",
     title: "UniSched Optimizer",
     tagline: "Conflict-free class schedules, solved automatically with backtracking",
@@ -207,22 +279,22 @@ export const PROJECTS: Project[] = [
   {
     slug: "Statix",
     title: "Statix",
-    tagline: "Automated tax audits & invoice reconciliation from raw fiscal data",
+    tagline: "Municipal fiscal audit analytics & invoice reconciliation engine",
     problem:
-      "Manual invoice reconciliation and municipal tax-audit reporting are repetitive, error-prone, and create compliance bottlenecks.",
+      "Municipal public accounting teams and auditors face weeks of manual cross-referencing between bank statements, SAT invoice XMLs, and municipal ledger books, leading to reporting delays and compliance errors.",
     solution:
-      "A Python analytics and reporting engine born directly out of municipal government accounting experience that parses raw invoices, runs reconciliation algorithms, and generates compliance audit reports.",
+      "A Python analytics and automated auditing engine born directly out of municipal government accounting experience that digests raw fiscal XMLs, reconciles ledger discrepancies, cross-checks tax retentions, and generates audit-ready PDF compliance reports.",
     technicalHighlights: [
-      "Domain expertise: Direct application of municipal public accounting & audit procedures",
-      "Data automation: Automated invoice reconciliation replacing hours of spreadsheet work",
-      "Report generation: Automated PDF generation with ReportLab from structured fiscal data",
-      "Validation engine: Algorithmic checks for discrepancy detection and tax calculation",
+      "Municipal accounting domain logic: Codified Mexican municipal public finance rules and audit checklists",
+      "Automated fiscal reconciliation: Multi-way reconciliation algorithm matching bank movements against SAT CFDI XMLs",
+      "Executive PDF reporting: Automated generation of structured audit reports with ReportLab",
+      "Reliability & testing: 42 comprehensive pytest unit tests covering edge cases, tax brackets, and data parsing",
     ],
-    categories: ["FinTech", "Data Analytics", "Automation"],
-    techStack: ["Python", "Streamlit", "ReportLab", "Pandas", "Microsoft Excel"],
+    categories: ["Data Analytics", "FinTech", "Automation"],
+    techStack: ["Python", "Streamlit", "ReportLab", "Pandas", "pytest"],
     featured: false,
     selected: true,
-    year: "2025",
+    year: "2025–2026",
     images: { useReadme: true },
     links: { github: "https://github.com/iamhuitron/Statix" },
   },

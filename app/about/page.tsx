@@ -5,20 +5,22 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { SITE } from "@/data/site";
 
 const SKILLS: Record<string, string[]> = {
-  Languages: ["TypeScript", "JavaScript", "Python", "Java", "Go", "PHP"],
-  "Frameworks & tools": [
+  Languages: ["Python", "TypeScript", "SQL", "JavaScript", "Go", "Java", "PHP"],
+  "Data & Engineering": [
+    "DuckDB (OLAP)",
+    "Apache Arrow",
+    "Parquet",
     "Next.js",
     "React",
     "React Native / Expo",
-    "Tailwind CSS",
-    "Streamlit",
-    "Wails",
-    "Git",
+    "PostgreSQL",
+    "SQLite",
+    "Git & CI/CD",
   ],
   "Currently exploring": [
     "German",
-    "Backtracking & constraint solving",
-    "Mobile CI/CD",
+    "Embedded Data Lakes & Columnar Storage",
+    "Econometrics & Financial Time Series",
   ],
 };
 

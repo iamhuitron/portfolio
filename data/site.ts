@@ -8,7 +8,7 @@ export const SITE = {
   fullName: "Ian Miguel Delgado Huitron",
   handle: "@iamhuitron",
   githubUsername: "iamhuitron",
-  role: "Software Engineer & Co-Founder at XAOL Software Studio · Informatics at UNAM · Google Student Ambassador 2026",
+  role: "Software & Data Engineer · Co-Founder at XAOL Software Studio · Informatics at UNAM · Google Student Ambassador 2026",
   statusLabel: "Co-Founder @Xaol-Studio · Google Student Ambassador 2026 · Open to Select Roles",
   location: "CDMX / Estado de México",
   university: "UNAM — FES Cuautitlán",
@@ -24,13 +24,13 @@ export const SITE = {
 } as const;
 
 export const CORE_STACK = [
-  { name: "React Native / Expo", category: "Mobile" },
+  { name: "Python (DuckDB & PyArrow)", category: "Data Engineering" },
   { name: "TypeScript", category: "Language" },
   { name: "Next.js & React", category: "Web" },
-  { name: "Python", category: "Automation & Data" },
-  { name: "Java (POO)", category: "Systems" },
-  { name: "Go", category: "Systems" },
-  { name: "Zustand & MMKV", category: "Architecture" },
+  { name: "React Native / Expo", category: "Mobile" },
+  { name: "PostgreSQL & SQLite", category: "Databases" },
+  { name: "Analytical SQL & Parquet", category: "Data Analytics" },
+  { name: "Go & Java", category: "Systems" },
   { name: "GitHub Actions (CI/CD)", category: "DevOps" },
 ] as const;
 
