@@ -20,7 +20,7 @@ export const SITE = {
   phone: "+52 593 126 9253",
 
   github: "https://github.com/iamhuitron",
-  siteUrl: "https://portfolio-pink-five-jaih91sunw.vercel.app",
+  siteUrl: "https://iamhuitron.vercel.app",
 } as const;
 
 export const CORE_STACK = [
