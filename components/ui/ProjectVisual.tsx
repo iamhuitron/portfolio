@@ -347,13 +347,13 @@ export function ProjectVisual({
               ? "(max-width: 768px) 100vw, 55vw"
               : "(max-width: 768px) 100vw, 33vw"
           }
-          className="object-cover grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
+          className="object-cover grayscale transition duration-500 group-hover:grayscale-0"
         />
       ) : (
         <ProjectGraphicFallback project={project} />
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/80 px-3.5 py-2 font-mono text-[10px] uppercase tracking-widest text-paper/90 border-t border-line/20 backdrop-blur-xs">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/90 px-3.5 py-2 font-mono text-[10px] uppercase tracking-widest text-paper/90 border-t border-line/20">
         <span className="flex items-center gap-1.5 text-accent">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           {image ? "Product preview" : "Interactive Architecture"}

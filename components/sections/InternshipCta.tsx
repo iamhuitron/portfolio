@@ -23,9 +23,9 @@ export function InternshipCta() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-24 pt-4 sm:pb-32">
       <Reveal>
-        <div className="grid gap-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 sm:p-12 sm:gap-12 shadow-2xl lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="grid gap-8 rounded-sm border border-line/35 bg-ink-soft/30 p-8 sm:p-12 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
+            <div className="inline-flex items-center gap-2 rounded-sm border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               Immediate Availability
             </div>

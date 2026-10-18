@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { FileText, Mail, Check, Sparkles } from "lucide-react";
+import { FileText, Mail, Check, Terminal } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 import { SITE, CORE_STACK } from "@/data/site";
@@ -44,11 +44,8 @@ export function Hero() {
         <p className="font-mono text-xs uppercase tracking-widest text-accent">
           Full-Stack &amp; Mobile Developer · UNAM Informatics
         </p>
-        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-          </span>
+        <div className="inline-flex items-center gap-2 rounded-sm border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
           {SITE.statusLabel}
         </div>
       </motion.div>
@@ -109,11 +106,11 @@ export function Hero() {
       {/* Core Engineering Stack & ATS Keyword Snapshot */}
       <motion.div
         {...fadeUp(0.5)}
-        className="mt-12 rounded-sm border border-line/35 bg-white/5 backdrop-blur-md border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] p-5 sm:p-6"
+        className="mt-12 rounded-sm border border-line/35 bg-ink-soft/40 p-5 sm:p-6"
       >
         <div className="flex flex-col gap-3 border-b border-line/25 pb-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">
-            <Sparkles size={13} />
+            <Terminal size={13} />
             Core Engineering Stack (ATS Snapshot)
           </div>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] text-muted">
