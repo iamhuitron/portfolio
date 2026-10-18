@@ -42,7 +42,7 @@ export function Hero() {
 
       <motion.div {...fadeUp(0.1)} className="mb-7 flex flex-wrap items-center gap-3">
         <p className="font-mono text-xs uppercase tracking-widest text-accent">
-          Full-Stack &amp; Mobile Developer · UNAM Informatics
+          Software &amp; Data Engineer · Co-Founder @ XAOL Studio · UNAM
         </p>
         <div className="inline-flex items-center gap-2 rounded-sm border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-xs uppercase tracking-widest text-emerald-400">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />

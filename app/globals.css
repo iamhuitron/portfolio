@@ -11,18 +11,18 @@
    this site shows off.
 ------------------------------------------------------------------------ */
 @theme {
-  --color-ink: oklch(15% 0.025 258);
-  --color-ink-soft: oklch(20% 0.026 258);
-  --color-paper: oklch(95% 0.012 85);
-  --color-muted: oklch(64% 0.02 258);
-  --color-line: oklch(55% 0.02 258);
+  --color-ink: #09090b;
+  --color-ink-soft: #121215;
+  --color-paper: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-line: #27272a;
 
-  --color-marigold: oklch(78% 0.16 68);
-  --color-cobalt: oklch(70% 0.14 238);
-  --color-plum: oklch(66% 0.17 322);
-  --color-verdigris: oklch(75% 0.13 162);
+  --color-marigold: #10b981;
+  --color-cobalt: #38bdf8;
+  --color-plum: #a78bfa;
+  --color-verdigris: #10b981;
 
-  --color-accent: var(--color-marigold);
+  --color-accent: #10b981;
 
   --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -31,23 +31,23 @@
    at runtime on <html> (see app/layout.tsx). "inline" tells Tailwind to
    reference those variables directly instead of copying a static value. */
 @theme inline {
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-space-grotesk);
   --font-mono: var(--font-jetbrains-mono);
 }
 
-/* Per-page accent. Each layout.tsx sets data-theme on a wrapper div. */
+/* Per-page accent */
 [data-theme="home"] {
-  --color-accent: var(--color-marigold);
+  --color-accent: #10b981;
 }
 [data-theme="projects"] {
-  --color-accent: var(--color-cobalt);
+  --color-accent: #38bdf8;
 }
 [data-theme="about"] {
-  --color-accent: var(--color-plum);
+  --color-accent: #a78bfa;
 }
 [data-theme="contact"] {
-  --color-accent: var(--color-verdigris);
+  --color-accent: #10b981;
 }
 
 @layer base {
@@ -68,16 +68,19 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Faint ruled-ledger texture, ambient across every page. Kept low-
-     contrast on purpose — it's texture, not a pattern to notice. */
+  /* Subtle technical grid matching XAOL blueprint aesthetic */
   body {
-    background-image: repeating-linear-gradient(
+    background-image: linear-gradient(
+      to right,
+      rgba(39, 39, 42, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
       to bottom,
-      oklch(55% 0.02 258 / 0.08) 0px,
-      oklch(55% 0.02 258 / 0.08) 1px,
-      transparent 1px,
-      transparent 44px
+      rgba(39, 39, 42, 0.2) 1px,
+      transparent 1px
     );
+    background-size: 48px 48px;
   }
 
   ::selection {
