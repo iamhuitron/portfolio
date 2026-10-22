@@ -6,6 +6,9 @@ import type { NextConfig } from "next";
 // `cacheComponents: true` later if you want per-segment `"use cache"` +
 // Suspense-based partial prerendering; not needed for a site this size.
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "raw.githubusercontent.com" },
