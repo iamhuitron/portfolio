@@ -21,6 +21,7 @@ export const SITE = {
 
   github: "https://github.com/iamhuitron",
   siteUrl: "https://iamhuitron.vercel.app",
+  url: "https://iamhuitron.vercel.app",
 } as const;
 
 export const CORE_STACK = [

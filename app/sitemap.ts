@@ -2,27 +2,28 @@ import { MetadataRoute } from 'next'
 import { SITE } from '@/data/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = SITE.siteUrl || SITE.url;
   return [
     {
-      url: SITE.url,
+      url: base,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${SITE.url}/projects`,
+      url: `${base}/projects`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${SITE.url}/cv`,
+      url: `${base}/cv`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${SITE.url}/contact`,
+      url: `${base}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
