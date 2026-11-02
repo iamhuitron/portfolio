@@ -15,7 +15,7 @@ export const SITE = {
   degree: "Licenciatura en Informática",
 
   email: "ianhuitron0687@gmail.com",
-  linkedin: "https://www.linkedin.com/in/ian-miguel-delgado-huitron-18b035349/",
+  linkedin: "https://www.linkedin.com/in/iamhuitron",
   resumeUrl: "/cv",
   phone: "+52 593 126 9253",
 
